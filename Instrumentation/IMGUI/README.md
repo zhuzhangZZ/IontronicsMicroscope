@@ -7,9 +7,10 @@ Frmaes data and CV data can be accumulated in a queue for saving while acquiring
 
 
 
-## Software for monitoring a CCD. ##
+## Software for monitoring a camera. ##
 The program follows the Model-View-Controller design structure. This allows a rapid exchange of different parts of the code.
-
+## Software for monitoring a potentiostat. ##
+The program is dedicated to make the potentiostat work together with the camera. 
 
 ### Structure of the folders: ###
 UUTrak: Main folder. Important executables should be placed here.
