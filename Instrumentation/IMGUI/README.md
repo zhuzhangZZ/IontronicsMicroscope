@@ -3,7 +3,7 @@ instrumentation project based on the Pynta module, previously UUTrack packages
 
 
 This program can be used for montoring the frames from the photometricsBSI camera and Basler camera, and synchronize the potentiostat with cameras.
-Frmaes data and CV data can be accumulated in a queue for saving while acquiring or saving retroactively.
+Frames data and CV data can be accumulated in a queue for saving while acquiring or saving retroactively.
 
 
 
