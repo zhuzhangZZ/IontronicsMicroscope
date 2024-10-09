@@ -1,0 +1,48 @@
+# specific version 
+PyYAML==3.13
+PyQt4==4.11.4  #  pip install PyQt4-4.11.4-cp37-cp37m-win_amd64.whl, download the PyQt4-4.11.4-cp37-cp37m-win_amd64.whl file and cd to the file directory
+pyqtgraph==0.10.0
+# if use Basler camera 
+Pypylon
+# any new version
+tqdm==4.65.0
+h5py==2.8.0
+alabaster==0.7.10
+argh==0.26.2
+Babel==2.4.0
+cffi==1.11.5
+colorama==0.3.7
+cycler==0.10.0
+docutils==0.13.1
+imagesize==1.1.0
+Jinja2==2.9.5
+kiwisolver==1.0.1
+Lantz==0.3
+livereload==2.6.0
+MarkupSafe==1.0
+matplotlib==3.0.2
+numpy==1.15.4
+olefile==0.46
+pathtools==0.1.2
+Pillow==5.3.0
+Pint==0.8.1
+pip==18.1
+port-for==0.4
+psutil==5.4.8
+pycparser==2.19
+PyDAQmx==1.4.2
+Pygments==2.2.0
+PyOpenGL==3.1.0
+pyparsing==2.3.0
+python-dateutil==2.7.5
+pytz==2018.7
+PyVISA==1.9.1
+requests==2.13.0
+scipy==1.1.0
+setuptools==40.6.2
+six==1.11.0
+snowballstemmer==1.2.1
+stringparser==0.4.1
+tornado==4.4.3
+watchdog==0.9.0
+wheel==0.32.3
