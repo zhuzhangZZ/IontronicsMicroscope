@@ -40,7 +40,6 @@ Each block starts with a very short explanation what it does and how to use it.
 While executing a block it will show some preliminary results, that sometimes help you find the best settings. 
 
 
-
 ### dependencies
 
 Python 3.6 with the following packages:
@@ -221,7 +220,3 @@ Contains a thread class that acquires continuously data until a variable is chan
 This enables to acquire at any frame rate without freezing the GUI or overloading it with data being acquired too fast.
 
 
-
-### Workplan and Issue tracker ###
-
-check [WORKPLAN](WORKPLAN.txt) file (please link here)
