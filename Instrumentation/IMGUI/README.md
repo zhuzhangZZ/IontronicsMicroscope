@@ -1,49 +1,18 @@
-# UUTtracking for Potiodynamics Scattering Microscopy v0.2 #
-_A nanoLINX instrumentation project based on the Pynta module, previously UUTrack_
+# instruments controlling fro iSCAT and total interal Scattering Microscopy #
+instrumentation project based on the Pynta module, previously UUTrack packages
 
-This program can be used for monitoring a CCD camera. The structure allows to perform high framerate acquisitions while displaying the images to the user at a configurable rate. Data can be accumulated in a queue for saving while acquiring or saving retroactively.
 
-The GUI has the possibility to show a waterfall and change the ROI of the camera by dragging vertical and horizontal lines. 
+This program can be used for montoring the frames from the photometricsBSI camera and Basler camera, and synchronize the potentiostat with cameras.
+Frmaes data and CV data can be accumulated in a queue for saving while acquiring or saving retroactively.
 
-The program also allows to trigger special tasks in a separate thread. To activate this option, the user needs to move the mouse on the image while pressing the **Ctrl** button. Pressing **Ctrl+C** triggers the special task, **Ctrl+V** stops it. **Shift+C**  clears the crosshair from the screen. 
 
-To acquire a cross cut of the image and display the standard deviation to mean ratio, press the **Alt** key while moving the mouse over the image. This also works live.
-
-## Documentation ## 
-The documentation can be built in the `docs` folder by using sphinx. The documentation for the ori can also be found at.
-(NOTE: this documentation is slightly outdated.)
-
-http://uutrack.readthedocs.io/en/latest/
-
-At the bottom of this readme is a shorter but more updated documentation.
-
-## Installation ##
-To install UUTrack it is important to be inside of a virtual environment. To install the code clone it to your lab computer using your own user. This allows you to easily update and track changes. Always keep the tested version in the master branch to be sure that you can run the setup without difficulty.
-
-## Running the program ##
-Once you have installed the package, enter the virtual environment and run the following commands to bring up the GUI:
-
-```python
- <virtualENV> Python startProgram.py
-```
-
-## Building the documentation
-The documentation of the program can be built locally and is available at http://uutrack.readthedocs.io.
-
-To build the documentation locally, you need to have sphinx installed. Go to the folder docs and run the following command:
-
-```python
-    sphinx-build -b html source/ build/
-```
-
-This will build all the documentation from the source folder into the build folder. Remember that for it to work, the program needs to import every module, therefore you can't build the documentation if you don't have the dependencies in order.
 
 ## Software for monitoring a CCD. ##
 The program follows the Model-View-Controller design structure. This allows a rapid exchange of different parts of the code.
 
 
 ### Structure of the folders: ###
-UUTrap: Main folder. Important executables should be placed here.
+UUTrak: Main folder. Important executables should be placed here.
 
 * _Controller_ : Houses the files related to periferals, such as python wrappers for cameras. They are organized inside of folders according to the brand. The idea is to copy/paste wrappers already available, without worrying for specific implementations.
 
@@ -51,27 +20,14 @@ UUTrap: Main folder. Important executables should be placed here.
 
 * _View_: Houses everything related to visualization of data. View should communicate only through models to devices and should get the input from the user. Acquisition tasks should be performed in a different thread, in order not to block the GUI. A timer updates the GUI at constant intervals, while the acquisition can happen at a different rate.
 
-## Screenshot ##
 
-- to be added
+###  code
 
-## Documentation
-
-
-### UUTrack code
-
-UUTrack is a python package created at nanoLinx as a GUI (Guided User Interface) for experimental setup cameras. It shows a preview and helps start and stop measuring. 
-
-I'll go trough the filestructure and explain what is in what folder with occasionally more information on certain files. 
-
-The documented version of UUTrack in this document is this experiments very own dedicated branch of the UUTrack software. 
-Because it branched when the UUTrack software was using the now outdated PyQt4 package instead of the updated PyQt5. 
-Because PyQt4 has some compatibility issues it possibly requires some tricks to get our version of UUTrack running. 
-These tricks would be gladly learned of if they are found out, because right now it is up to whomever wants to use it to solve these issues. 
-So to be clear: there are probably unknown issues that will making a fresh install hard.
+The code is a python package created as a GUI (Guided User Interface) for the setup in ITPDYS in PAris for the setup with iSCAT and TIRS. 
 
 
-### Data generated by UUTrack
+
+### Generated Data  
 
 When finishing a measurement with UUTrack you have a number of \texttt{\allowbreak "(..).hdf5"} and \texttt{\allowbreak "(..)\_m\#.npy"\allowbreak } files, where \texttt{\allowbreak (..)} is what you called the measurement. 
 These files you can analyze using the file \texttt{\allowbreak "PDSM/Analysis/\allowbreak data\_processing/\allowbreak new\_analysis\_file.py"}. 
@@ -84,11 +40,13 @@ While executing a block it will show some preliminary results, that sometimes he
 
 
 
-### UUTrack dependencies
+### dependencies
 
 Python 3.6 with the following packages:
 
 ```
+hardpatato
+pyVCAM
 alabaster==0.7.10
 argh==0.26.2
 Babel==2.4.0
